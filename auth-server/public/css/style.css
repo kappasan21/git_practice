@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: ivory;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header,
+footer {
+  background-color: #6fa2ff;
+  width: 100%;
+  height: 12%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 2%;
+}
+
+header {
+  position: absolute;
+  top: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+main {
+  margin-top: 15%;
+}
+
+button {
+  background-color: lightgray;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.headerContainers {
+  height: 90%;
+  width: 90%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+.headerContainers form {
+  width: 90%;
+  margin: 0 auto;
+}
+.headerContainers .logoutBtn,
+.headerContainers .toLoginBtn,
+.headerContainers .toSignupBtn {
+  padding: 0.3rem;
+  width: 80%;
+}
+
+.centerContainer {
+  text-align: center;
+  justify-content: center;
+}
+.centerContainer h1 {
+  font-size: 3rem;
+  display: block;
+}
+
+.rightContainer p {
+  width: 80%;
+}
+.rightContainer p span {
+  font-weight: bold;
+}
+
+main {
+  width: 100%;
+  padding: 5%;
+  min-height: 50vh;
+}
+
+#msgContainer {
+  min-height: 5vh;
+  padding: 2% 18%;
+}
+
+#loginForm,
+#signupForm {
+  background-color: #6fa2ff;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 3%;
+  border-radius: 10px;
+}
+#loginForm input,
+#signupForm input {
+  width: 100%;
+  padding: 1%;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1.2rem;
+}
+#loginForm button,
+#signupForm button {
+  width: 102%;
+  padding: 1%;
+  margin: 1rem auto 0 auto;
+}
+
+.menuMain {
+  width: 89%;
+}
+.menuMain .menuContainer {
+  background-color: #6fa2ff;
+  padding: 2%;
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+.menuMain .menuContainer p {
+  width: 100%;
+  overflow: auto;
+}/*# sourceMappingURL=style.css.map */

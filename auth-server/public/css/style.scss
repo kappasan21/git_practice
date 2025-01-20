@@ -1,0 +1,161 @@
+$mainColor: #6fa2ff;
+$subColor: ivory;
+$btnColor: lightgray;
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background-color: $subColor;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+header,
+footer {
+  background-color: $mainColor;
+  width: 100%;
+  height: 12%;
+  display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 2%;
+}
+
+
+header {
+  position: absolute;
+  top: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+
+main {
+  margin-top: 15%;
+}
+
+
+button {
+  background-color: $btnColor;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+
+
+.headerContainers {
+  height: 90%;
+  width: 90%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  
+  form {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .logoutBtn,
+  .toLoginBtn,
+  .toSignupBtn {
+    padding: 0.3rem;
+    width: 80%;
+  }
+}
+
+
+
+.centerContainer {
+  text-align: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 3rem;
+    display: block;
+  }
+}
+
+.rightContainer {
+ 
+  p {
+    width: 80%;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+
+
+
+
+
+main {
+  width: 100%;
+  padding: 5%;
+  min-height: 50vh;
+}
+
+
+
+#msgContainer {
+  min-height: 5vh;
+  padding: 2% 18%;
+}
+
+#loginForm,
+#signupForm {
+  background-color: $mainColor;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 3%;
+  border-radius: 10px;
+
+  input {
+    width: 100%;
+    padding: 1%;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.2rem;
+  }
+
+  button {
+    width: 102%;
+    padding: 1%;
+    margin: 1rem auto 0 auto;
+  }
+}
+
+
+.menuMain {
+  width: 89%;
+
+  .menuContainer {
+    background-color: $mainColor;
+    padding: 2%;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+
+    p {
+        width: 100%;
+        overflow: auto;
+    }
+  }
+}

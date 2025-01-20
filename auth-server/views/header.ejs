@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="leftContainer headerContainers">
+      <% if(locals.login) { %>
+        <form method="post" action="/logout">
+          <button class="logoutBtn" type="submit">Log out</button>
+        </form>
+      <% } %>
+      <% if(locals.page === "login") { %>
+        <form action="/signup" method="get">
+          <button class="toSignupBtn" type="submit">To SignUp Page</button>
+        </form>
+      <% } %>
+      <% if(locals.page === "signup") { %>
+        <form action="/" method="get">
+          <button class="toLoginBtn" type="submit">To Login Page</button>
+        </form>
+      <% } %>
+    </div>
+
+    <div class="centerContainer headerContainers">
+      <h1 class="title"><%= title %></h1>
+    </div>
+    
+    <div class="rightContainer headerContainers">
+      <p id="username">
+        <span>USERNAME: </span><%= username %>
+      </p>
+    </div>
+  </header>
+</body>
+</html>
