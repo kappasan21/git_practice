@@ -24,6 +24,7 @@ const allowedOrigins = [
   "http://localhost:8510", // For this server
   "http://localhost:7654", // For Task Management App
   "https://supabase.com",
+  "https://github-desktop-test-1.onrender.com/",
 ];
 // Configure options of CORS
 const corsOptions = {
