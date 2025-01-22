@@ -21,8 +21,9 @@ const PORT = process.env.PORT;
 const app = express();
 // List for origins to access this server
 const allowedOrigins = [
-  "http://localhost:8500", // For this server
+  "http://localhost:8510", // For this server
   "http://localhost:7654", // For Task Management App
+  "https://supabase.com",
 ];
 // Configure options of CORS
 const corsOptions = {
@@ -62,6 +63,20 @@ const pool = new Pool({
   port: process.env.DB_PORT,
   ssl: { rejectUnauthorized: false },
 });
+// Test the connection
+(async () => {
+  try {
+    const client = await pool.connect();
+    console.log('Connected to Supabase DB successfully!');
+    const res = await client.query('SELECT NOW()');
+    console.log(res.rows);
+    client.release();
+  } catch (error) {
+    console.error('Error connecting to Supabase:', error);
+  }
+})();
+
+
 
 
 
@@ -147,7 +162,8 @@ app.post("/login", (req, res) => {
         res.locals.message = "Invalid username or password. Please try again.";
         return res.status(404).render("login", {
           title: "Log In",
-          username: results.rows[0].username,
+          username: "---",
+          // username: results.rows[0].username,
         });
       } else {
         // Found the email in DB
