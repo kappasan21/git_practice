@@ -24,14 +24,13 @@ const allowedOrigins = [
   "http://localhost:8510", // For this server
   "http://localhost:7654", // For Task Management App
   "https://supabase.com",
-  "https://github-desktop-test-1.onrender.com/",
+  "https://github-desktop-test-1.onrender.com", // Without trailing slash /
 ];
 // Configure options of CORS
 const corsOptions = {
   origin: function (origin, callback) {
-    console.log('Incoming request origin:', origin);
-    console.log(origin); // Log the origin
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+    console.log('Incoming request origin:', origin); // Log the origin
+    if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true); // Allow origin
     } else {
       callback(new Error("Not allowed by CORS")); // Disallow origin
@@ -95,8 +94,14 @@ app.use((req, res, next) => {
 });
 
 // ROUTES
+// redirect to /login
+app.get('/', (req, res) => {
+  res.redirect('/login');
+});
+
+
 // Display Login Page
-app.get("/", (req, res) => {
+app.get("/login", (req, res) => {
   res.locals.login = false;
   res.locals.page = "login";
   res.locals.message = "Please sing up if you don't have a user account yet.";
@@ -308,10 +313,11 @@ app.post("/logout", (req, res) => {
   res.clearCookie("token");
   console.log("Logged out");
 
-  res.render("login", {
-    title: "Log In",
-    username: "---",
-  });
+  // res.render("login", {
+  //   title: "Log In",
+  //   username: "---",
+  // });
+  res.redirect('/login');
 });
 
 app.listen(PORT, () => {
