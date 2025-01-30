@@ -153,17 +153,26 @@ button {
 }
 .menuContainer .appList li {
   background-color: orange;
-  height: 7vh;
+  height: 15vh;
   width: 15vw;
   border-radius: 10px;
   padding: 2%;
   text-align: center;
+  box-shadow: 0 10px 5px rgb(167, 92, 1);
 }
 .menuContainer .appList li a {
   display: block;
   height: 100%;
   width: 100%;
-  font-weight: bold;
   text-decoration: none;
   color: darkslategray;
+}
+.menuContainer .appList li a #btn-title {
+  font-weight: bold;
+  height: 40%;
+}
+.menuContainer .appList li a #btn-summary {
+  font-size: 0.8rem;
+  text-align: left;
+  padding: 0 5%;
 }/*# sourceMappingURL=style.css.map */
