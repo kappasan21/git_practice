@@ -15,7 +15,7 @@ body {
   //  No idea the reason but 90% is the max window width...
   width: 90%; 
   height: 100vh;
-  overflow: hidden;
+  overflow: auto;
 }
 
 
@@ -28,23 +28,28 @@ footer {
   // grid-template-columns: repeat(3, 1fr);
   grid-template-columns: 1fr 2fr 1fr;
   padding: 2%;
+  opacity: 0.9;
 }
 
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 
 
 main {
   margin: 20% auto 0 auto;
+  width: 100%;
+  padding: 5%;
+  min-height: 50vh;
 }
+
 
 
 button {
@@ -53,11 +58,15 @@ button {
   border-radius: 5px;
   font-size: 1.2rem;
   cursor: pointer;
+  // padding: 3% 5%;
+  padding: 0.3rem;
+  width: 80%;
 }
 
 
 
-.headerContainers {
+.headerContainers,
+.footerContainers {
   height: 90%;
   width: 90%;
   padding: 1rem;
@@ -69,12 +78,12 @@ button {
     margin: 0 auto;
   }
 
-  .logoutBtn,
-  .toLoginBtn,
-  .toSignupBtn {
-    padding: 0.3rem;
-    width: 80%;
-  }
+  // .logoutBtn,
+  // .toLoginBtn,
+  // .toSignupBtn {
+  //   padding: 0.3rem;
+  //   width: 80%;
+  // }
 }
 
 
@@ -105,29 +114,33 @@ button {
 
 
 
-main {
-  width: 100%;
-  padding: 5%;
-  min-height: 50vh;
-}
-
-
-
 #msgContainer {
   min-height: 5vh;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
   width: 65%;
+
+  .msgTitle {
+    font-size: 1.1rem;
+  }
+
+  .msgList {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 #loginForm,
-#signupForm {
+#signupForm,
+#appRegisterForm,
+#appListForm {
   background-color: $mainColor;
   max-width: 60%;
   margin: 0 auto;
   padding: 3%;
   border-radius: 10px;
 
-  input {
+  input,
+  textarea {
     width: 100%;
     padding: 1%;
     margin-bottom: 1rem;
@@ -144,20 +157,48 @@ main {
   }
 }
 
+#appListForm {
+  margin-top: 2rem;
+}
 
-.menuMain {
-  width: 89%;
+.menuContainer {
+  background-color: $mainColor;
+  padding: 2%;
+  border-radius: 10px;
+  max-width: 85%;
+  margin: 0 auto;
+  min-height: 30vh;
 
-  .menuContainer {
-    background-color: $mainColor;
-    padding: 2%;
-    border-radius: 10px;
-    width: 80%;
+  p {
+      width: 100%;
+      overflow: auto;
+  }
+
+  .appList {
+    list-style: none;
+    width: 90%;
     margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    padding: 2%;
+    justify-content: center;
 
-    p {
+    li {
+      background-color: orange;
+      height: 7vh;
+      width: 15vw;
+      border-radius: 10px;
+      padding: 2%;
+      text-align: center;
+
+      a {
+        display: block;
+        height: 100%;
         width: 100%;
-        overflow: auto;
+        font-weight: bold;
+        text-decoration: none;
+        color: darkslategray;
+      }
     }
   }
 }

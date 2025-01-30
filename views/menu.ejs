@@ -10,9 +10,34 @@
   <%- include('header'); %>
   
   <main class="menuMain">
-    <div class="menuContainer">
-      <p class="msg"><%= locals.message %></p>
+
+    <div id="msgContainer">
+      <p class="msgTitle">Message:</p>  
+      <ul class="msgList">
+        <li><%= locals.message %></li>
+      </ul>
     </div>
+
+    <div class="menuContainer">
+      <ul class="appList">
+        <li>
+          <a href="http://localhost:6200">
+            <p>Film Finder</p>
+          </a>
+        </li>
+        <li>
+          <a href="http://localhost:5200">
+            <p>Mikan Cuisine - Web Order</p>
+          </a>
+        </li>
+        <li>
+          <a href="http://localhost:7678">
+            <p>Codey Goods Web Store</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  
   </main>
 
   <%- include('footer'); %>

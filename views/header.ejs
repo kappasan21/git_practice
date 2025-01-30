@@ -15,12 +15,17 @@
       <% } %>
       <% if(locals.page === "login") { %>
         <form action="/signup" method="get">
-          <button class="toSignupBtn" type="submit">To SignUp Page</button>
+          <button class="toSignupBtn" type="submit">SignUp Page</button>
         </form>
       <% } %>
       <% if(locals.page === "signup") { %>
         <form action="/" method="get">
-          <button class="toLoginBtn" type="submit">To Login Page</button>
+          <button class="toLoginBtn" type="submit">Login Page</button>
+        </form>
+      <% } %>
+      <% if(locals.page !== "login" && locals.page !== "signup" && locals.page !== "menu") { %>
+        <form action="/menu" method="get">
+          <button class="ToMenuPage" type="submit">Menu Page</button>
         </form>
       <% } %>
     </div>

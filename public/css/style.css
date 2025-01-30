@@ -7,7 +7,7 @@ body {
   background-color: ivory;
   width: 90%;
   height: 100vh;
-  overflow: hidden;
+  overflow: auto;
 }
 
 header,
@@ -18,20 +18,24 @@ footer {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   padding: 2%;
+  opacity: 0.9;
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 
 main {
   margin: 20% auto 0 auto;
+  width: 100%;
+  padding: 5%;
+  min-height: 50vh;
 }
 
 button {
@@ -40,24 +44,22 @@ button {
   border-radius: 5px;
   font-size: 1.2rem;
   cursor: pointer;
+  padding: 0.3rem;
+  width: 80%;
 }
 
-.headerContainers {
+.headerContainers,
+.footerContainers {
   height: 90%;
   width: 90%;
   padding: 1rem;
   display: flex;
   align-items: center;
 }
-.headerContainers form {
+.headerContainers form,
+.footerContainers form {
   width: 90%;
   margin: 0 auto;
-}
-.headerContainers .logoutBtn,
-.headerContainers .toLoginBtn,
-.headerContainers .toSignupBtn {
-  padding: 0.3rem;
-  width: 80%;
 }
 
 .centerContainer {
@@ -76,20 +78,23 @@ button {
   font-weight: bold;
 }
 
-main {
-  width: 100%;
-  padding: 5%;
-  min-height: 50vh;
-}
-
 #msgContainer {
   min-height: 5vh;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
   width: 65%;
+}
+#msgContainer .msgTitle {
+  font-size: 1.1rem;
+}
+#msgContainer .msgList {
+  width: 90%;
+  margin: 0 auto;
 }
 
 #loginForm,
-#signupForm {
+#signupForm,
+#appRegisterForm,
+#appListForm {
   background-color: #6fa2ff;
   max-width: 60%;
   margin: 0 auto;
@@ -97,7 +102,13 @@ main {
   border-radius: 10px;
 }
 #loginForm input,
-#signupForm input {
+#loginForm textarea,
+#signupForm input,
+#signupForm textarea,
+#appRegisterForm input,
+#appRegisterForm textarea,
+#appListForm input,
+#appListForm textarea {
   width: 100%;
   padding: 1%;
   margin-bottom: 1rem;
@@ -107,23 +118,52 @@ main {
   font-size: 1.2rem;
 }
 #loginForm button,
-#signupForm button {
+#signupForm button,
+#appRegisterForm button,
+#appListForm button {
   width: 102%;
   padding: 1%;
   margin: 1rem auto 0 auto;
 }
 
-.menuMain {
-  width: 89%;
+#appListForm {
+  margin-top: 2rem;
 }
-.menuMain .menuContainer {
+
+.menuContainer {
   background-color: #6fa2ff;
   padding: 2%;
   border-radius: 10px;
-  width: 80%;
+  max-width: 85%;
   margin: 0 auto;
+  min-height: 30vh;
 }
-.menuMain .menuContainer p {
+.menuContainer p {
   width: 100%;
   overflow: auto;
+}
+.menuContainer .appList {
+  list-style: none;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  padding: 2%;
+  justify-content: center;
+}
+.menuContainer .appList li {
+  background-color: orange;
+  height: 7vh;
+  width: 15vw;
+  border-radius: 10px;
+  padding: 2%;
+  text-align: center;
+}
+.menuContainer .appList li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+  text-decoration: none;
+  color: darkslategray;
 }/*# sourceMappingURL=style.css.map */

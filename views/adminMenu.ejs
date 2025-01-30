@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrator Menu</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <%- include("header"); %>
+
+  <main>
+    <div id="current-apps-list-container">
+      <div id="msgContainer">
+        <p class="msgTitle">Message:</p>  
+        <ul class="msgList">
+          <li><%= locals.message %></li>
+
+          <% if(appList.length < 1) { %>
+            <li>No Apps are registered now.</li>
+          <% } else { %>
+            <li>There should some apps here...</li>
+          <% } %>
+        </ul>
+      </div>
+
+      <form id="appRegisterForm" method="POST" action="">
+        <h2>Add App</h2>
+        <p>App URL:</p>
+        <input type="text" name="appURL" placeholder="url" />
+        <p>App Title:</p>
+        <input type="text" name="appTitle" placeholder="Title" />
+        <p>App Summary:</p>
+        <textarea type="text" name="appSummary" placeholder="Summary"></textarea>
+        <button type="submit">Add App</button>
+      </form>
+
+      <form id="appListForm">
+        <h2>App List</h2>
+
+      </form>
+   
+      
+    </div>
+  </main>
+
+  <%- include("footer"); %>
+</body>
+</html>

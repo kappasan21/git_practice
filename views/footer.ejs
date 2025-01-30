@@ -8,11 +8,17 @@
 </head>
 <body>
   <footer>
-    <div class="leftContainer"></div>
-    <div class="centerContainer">
+    <div class="leftContainer footerContainers">
+      <% if(locals.page === 'menu') { %>
+        <form method="get" action="/admin">
+          <button class="toAdminBtn" type="submit">Admin Page</button>
+        </form>
+      <% } %>
+    </div>
+    <div class="centerContainer footerContainers">
       <p>🍊Mikan Co.</p>
     </div>
-    <div class="rightContainer"></div>
+    <div class="rightContainer footerContainers"></div>
   </footer>
 </body>
 </html>

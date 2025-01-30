@@ -1,0 +1,8 @@
+// postgres library is totally different from pg library including the way of uses...
+import postgres from 'postgres';
+
+const connectionString = process.env.DB_URL;
+console.log("Current connection string: ", connectionString);
+const pool = postgres(connectionString);
+
+export default pool;
