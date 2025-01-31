@@ -153,7 +153,7 @@ button {
 }
 .menuContainer .appList li {
   background-color: orange;
-  height: 15vh;
+  height: 20vh;
   width: 15vw;
   border-radius: 10px;
   padding: 2%;
@@ -170,6 +170,7 @@ button {
 .menuContainer .appList li a #btn-title {
   font-weight: bold;
   height: 40%;
+  overflow: hidden;
 }
 .menuContainer .appList li a #btn-summary {
   font-size: 0.8rem;

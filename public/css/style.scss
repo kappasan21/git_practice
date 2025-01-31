@@ -185,7 +185,7 @@ button {
 
     li {
       background-color: orange;
-      height: 15vh;
+      height: 20vh;
       width: 15vw;
       border-radius: 10px;
       padding: 2%;
@@ -202,6 +202,7 @@ button {
         #btn-title {
           font-weight: bold;
           height: 40%;
+          overflow: hidden;
         }
 
         #btn-summary {
