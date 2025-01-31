@@ -35,6 +35,7 @@ const allowedOrigins = [
   "https://supabase.com",   // For DB on Supabase
   "https://github-desktop-test-1.onrender.com", // This server on Render
   "https://taskschedulemgtapp.netlify.app/",    // Task Management App on Netlify
+  "https://mikan-chef.netlify.app/",            // Mikan Chef App on Netlify
 ];
 // Configure options of CORS
 const corsOptions = {
