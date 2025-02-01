@@ -52,7 +52,6 @@ button {
 .footerContainers {
   height: 90%;
   width: 90%;
-  padding: 1rem;
   display: flex;
   align-items: center;
 }
@@ -60,6 +59,12 @@ button {
 .footerContainers form {
   width: 90%;
   margin: 0 auto;
+}
+
+.leftContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .centerContainer {
@@ -176,4 +181,37 @@ button {
   font-size: 0.8rem;
   text-align: left;
   padding: 0 5%;
+}
+
+@media (max-width: 401px) {
+  main {
+    height: 100%;
+    margin: 40% auto 0 auto;
+  }
+  .headerContainers {
+    text-align: center;
+  }
+  .headerContainers button {
+    width: 100%;
+    font-size: 0.7rem;
+  }
+  .headerContainers h1 {
+    font-size: 2rem;
+  }
+  .headerContainers p {
+    font-size: 0.7rem;
+  }
+  .footerContainers button {
+    font-size: 0.7rem;
+  }
+  .appList {
+    flex-direction: column;
+    margin-bottom: 50vh;
+    gap: 1rem;
+  }
+  .appList li {
+    margin: 0 auto;
+    min-width: 90%;
+    max-height: 7rem;
+  }
 }/*# sourceMappingURL=style.css.map */

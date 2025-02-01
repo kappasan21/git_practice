@@ -51,7 +51,6 @@ main {
 }
 
 
-
 button {
   background-color: $btnColor;
   border: none;
@@ -69,7 +68,7 @@ button {
 .footerContainers {
   height: 90%;
   width: 90%;
-  padding: 1rem;
+  // padding: 1rem;
   display: flex;
   align-items: center;
   
@@ -77,16 +76,13 @@ button {
     width: 90%;
     margin: 0 auto;
   }
-
-  // .logoutBtn,
-  // .toLoginBtn,
-  // .toSignupBtn {
-  //   padding: 0.3rem;
-  //   width: 80%;
-  // }
 }
 
-
+.leftContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
 
 .centerContainer {
   text-align: center;
@@ -211,6 +207,52 @@ button {
           padding: 0 5%;
         }
       }
+    }
+  }
+}
+
+
+
+
+
+@media (max-width: 401px) {
+  main {
+    height: 100%;
+    margin: 40% auto 0 auto;
+  }
+
+  .headerContainers {
+    text-align: center;
+    button {
+      width: 100%;
+      font-size: 0.7rem;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 0.7rem;
+    }
+  }
+
+  .footerContainers {
+    button {
+      font-size: 0.7rem;
+    }
+  }
+
+
+  .appList {
+    flex-direction: column;
+    margin-bottom: 50vh;
+    gap: 1rem;
+
+    li {
+      margin: 0 auto;
+      min-width: 90%;
+      max-height: 7rem;
     }
   }
 }
